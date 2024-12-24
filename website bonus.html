@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explainable AI in COVID-19</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f5faff;
+            color: #333;
+        }
+
+        header {
+            background: #1e3a8a;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header .header-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header .header-content p {
+            font-size: 1.2rem;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 20px;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        section:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            color: #007bff;
+            margin-bottom: 10px;
+            transition: none; /* Remove the transition effect for h2 */
+        }
+
+        h3 {
+            color: #1e40af;
+            margin-top: 15px;
+        }
+
+        ul {
+            list-style: disc;
+            margin-left: 20px;
+        }
+
+        img {
+            max-width: 50%; 
+            height: auto;
+            display: block;
+            margin: 10px auto; 
+            border-radius: 8px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #1e3a8a;
+            color: #ffffff;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Explainable AI (XAI)</h1>
+        </div>
+    </header>
+
+    <main>
+        <section id="objective">
+            <h2>Objective</h2>
+            <p>The goal is to predict severity using patient data and provide explanations for predictions using Explainable AI (XAI).</p>
+        </section>
+
+        <section id="workflow">
+            <h2>Workflow</h2>
+            <p>The workflow includes data preprocessing, feature selection, model training, and result explanation. Techniques like Random Forest and Decision Tree are applied to predict patient outcomes with high accuracy and interpretability.</p>
+            <img src="workflow.png" alt="Workflow Illustration">
+        </section>
+
+        <section id="techniques">
+            <h2>Techniques Used in Prediction</h2>
+            <h3>Feature Selection</h3>
+            <p>Chose important clinical markers using techniques like Mutual Information, bat algorithm, fower pollination algorithm etc.</p>
+            <h3>Machine Learning Models</h3>
+            <p>Machine learning, a type of artificial intelligence, enables software to predict outcomes based on past data. Used Random Forest, Decision Tree, Boosting, Stacking, and Voting etc.</p>
+            <h3>Deep Learning Models</h3>
+            <p>Deep learning models used include DNN for complex patterns, 1D-CNN for tabular data, and LSTM for sequential or time-series data analysis.</p>
+        </section>
+
+        <section id="models">
+            <h2>Machine Learning Models</h2>
+            <div class="model">
+                <h3>Random Forest</h3>
+                <p><strong>Advantages:</strong></p>
+                <ul>
+                    <li>High Accuracy</li>
+                    <li>Strong Resistance to Overfitting</li>
+                    <li>Good Data Handling Capability</li>
+                    <li>Feature Importance</li>
+                </ul>
+                <p><strong>Disadvantages:</strong></p>
+                <ul>
+                    <li>High Computational Cost</li>
+                    <li>Poor Interpretability</li>
+                </ul>
+                <img src="random_forest.png" alt="Random Forest Illustration">
+            </div>
+            <div class="model">
+                <h3>Decision Tree</h3>
+                <p><strong>Advantages:</strong></p>
+                <ul>
+                    <li>Fast Execution</li>
+                    <li>Easy to Understand</li>
+                    <li>Simple Data Preparation</li>
+                </ul>
+                <p><strong>Disadvantages:</strong></p>
+                <ul>
+                    <li>Overfitting</li>
+                    <li>Unstable</li>
+                    <li>No Feature Interactions</li>
+                    <li>Too Many Categories</li>
+                </ul>
+                <img src="decision_tree.png" alt="Decision Tree Illustration">
+            </div>
+        </section>
+
+        <section id="applications">
+            <h2>Applications in COVID-19</h2>
+            <div class="application">
+                <h3>Decision Tree - Risk Stratification</h3>
+                <p>Decision Tree can be used in rapid patient risk stratification (ex: COVID-19 risk assessment) to predict whether a patient is at high risk based on symptoms, oxygen saturation levels, and age. Compared to Random Forest, Decision Tree provides simpler and more interpretable decision paths, making it easier for healthcare providers to quickly understand and act on the results in time-sensitive or resource-limited situations.</p>
+            </div>
+            <div class="application">
+                <h3>Random Forest - Medical Diagnosis</h3>
+                <p>Random Forest can be used in disease diagnosis (ex: cancer detection) to predict whether a patient has a certain disease based on multiple pathological features. Compared to a single decision tree, Random Forest can reduce errors caused by fluctuations in individual features and provide more stable predictions.</p>
+            </div>
+        </section>
+
+        <section id="optimization">
+            <h2>Optimization Algorithm</h2>
+            <p>The data shows that Random Forest consistently outperforms Decision Tree across various metrics, particularly in CSA, PSO, and HHO evaluation methods. By integrating multiple decision trees, Random Forest improves stability and accuracy with minimal score fluctuations across feature selection methods. In contrast, Decision Tree, while simple and easy to interpret, performs worse in PSO and CSA and shows greater variability in HHO, reflecting its sensitivity to data changes. Random Forest is ideal for scenarios requiring high accuracy, while Decision Tree suits quick modeling and interpretation.</p>
+            <img src="optimization_algorithm.png" alt="Optimization Algorithm Illustration">
+        </section>
+        <section id="what is XAI">
+            <h2>What is Explainable AI</h2>
+            <p>Explainable AI (XAI) refers to AI systems that are designed to be transparent, interpretable, and understandable by humans.</p>
+            <img src="xai.png" alt="Explainable AI concept">
+        </section>
+
+        <section id="why XAI">
+            <h2>Why do we need XAI</h2>
+            <p><strong>Reasons:</strong></p>
+            <ul>
+                <li>Trust and Acception</li>
+                <li>Compliance with Regulations</li>
+                <li>Fairness and Bias Detection</li>
+                <li>Learning and improvement</li>
+            </ul>
+        </section>
+
+        <section id="future outlook">
+            <h2>Future Outlook</h2>
+            <ul>
+                <li>Global Dataset Expansion</li>
+                <li>Real-Time Applicatioon in Healthcare</li>
+                <li>Integration of Multimodal Data</li>
+                <li>Adaptive AI for Evolving Diseases</li>
+            </ul>
+        </section>
+
+
+       
+    </main>
+
+    <footer>
+        <p>Group 3 李姵蓁 黃聿綺 蔡瑋恩 鄧均婕</p>
+    </footer>
+</body>
+</html>
